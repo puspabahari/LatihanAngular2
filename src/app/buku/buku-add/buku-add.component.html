@@ -1,19 +1,19 @@
 <form [formGroup]="contactForm">
-  <div class="form-group row">
-        <label for="inputISBN" class="col-sm-3 form control-label">
-          ISBN {{inputInfo.isbn}} </label>
-        <div class="col-sm-6">
-          <input type="text" [formControlName]="'isbn'" class="form-control" value="{{bukuEditParent.isbn}}">
-          <span *ngIf="!contactForm.get('isbn').valid && contactForm.get('isbn').touched" class='help-block'>
-            <span *ngIf="contactForm.get('isbn').errors['required']">
-              Wajib Diisi!
-            </span>
-            <span *ngIf="contactForm.get('isbn').errors['blank']">
-              Tidak boleh kosong!
-            </span>
-            </span>
-          </div>
-        </div>
+        <div class="form-group-row">
+            <label for="inputISBN" class="col-sm-3 form control-label">
+              ISBN {{inputInfo.namabuku}} </label>
+            <div class="col-sm-6">
+              <input type="text" [formControlName]="'isbn'" class="form-control" value="{{bukuEditParent.isbn}}">
+              <span *ngIf="!contactForm.get('isbn').valid && contactForm.get('isbn').touched" class='help-block'>
+                <span *ngIf="contactForm.get('isbn').errors['isbn']">
+                  Wajib Diisi!
+                </span>
+                <span *ngIf="contactForm.get('isbn').errors['blank']">
+                  Tidak boleh kosong!
+                </span>
+                </span>
+              </div>
+            </div>
 
       <div class="form-group-row">
         <label for="inputNamaBuku" class="col-sm-3 form control-label">
